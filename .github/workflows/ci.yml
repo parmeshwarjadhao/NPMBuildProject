@@ -2,7 +2,7 @@ name: Node JS deployment
 on: push
 jobs:
     testing:
-      runs on: ubuntu-latest
+      runs-on: ubuntu-latest
       steps:
       - name: Get Code
         uses: actions/checkout@v4
@@ -16,6 +16,7 @@ jobs:
         run: npm test
     
     deploying:
+      runs-on: ubuntu-latest
       steps:
       - name: Get Code
         uses: actions/checkout@v4
